@@ -1,0 +1,164 @@
+<!--Problem Statement
+creating an html registration form for a website that allows users to sign up for an account the registration form should include fields for the user to enter their name .email address,possword,and any other relevent information required for registration.additionally,implement javascript from validation to ensure that user input is accurate and meets the specified criteria before submitting the form.
+Requirements:
+1)html registration form:
+.design a user friendly html form with input fields for the user's name,email address,password,and any other necessary information.
+.use appropriate html elements such as <input>,<label>,and <button> to structure the form
+
+2)css styling:
+.apply basic styling for appealing look of an html registration form.
+
+3)javascript form validation:
+.implement client-side form validation using javasript to validate user input before submitting the form.
+.validate each input field to ensure that it is not empty and meets any specified criteria(e.g. minimum password length,valid email format)
+.display error message to alert users of any validation errors
+.check for password length which should not be less than 8 or greater than 12
+.password should contain at least one alphabet,one digit and one special character.
+  
+ created by me
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="project12.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+          <form id="registrationForm" onsubmit="return validateForm()">
+               <div class="form group">
+                <label for="name">full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span id="nameError" class="error"></span>
+               </div>
+               <br>
+               <br>
+
+               <div class="form group">
+                <label for="email">email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error"></span>
+               </div>
+               <br>
+               <br>
+
+               <div class="form group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <span id="password" class="error"></span>
+               </div>
+               <br>
+               <br>
+
+               <div class="form group">
+                <label for="name">Confirm password:</label>
+                <input type="confirm password" id="conform password" name="confirm password" required>
+                <span id="confirm passwordError" class="error"></span>
+               </div>
+               <br>
+               <br>
+
+               <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+
+        </form>
+    </div>
+    
+</body>
+</html>
+
+ 
+     mysirg instructions-
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="project12.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Registration form</h2>
+            <form action="#" id="registrationform" onsubmit="validateform(event)">
+
+               <div class="form-group">
+                   <label for="name">name:</label>
+                   <input type="text" id="name" name="name">
+               </div>
+
+                <div class="form-group">
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                 <div class="form-group">
+                     <label for="password">password:</label>
+                     <input type="password" id="password" name="password">
+                 </div>
+
+                 <div class="form-group">
+                      <label for="confirm password">confirm password:</label>
+                      <input type="confirmpassword" id="confirmpassword" name="confirmpassword">
+                 </div>
+
+                       <button type="submit">Submit</button>
+
+            </form>  
+                 <div id="error-message"></div>  
+        </div>
+                <script src="project12.js"></script>
+        
+    </body>
+    </html>
+
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="project9.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration form</h2>
+        <form action="#" id="registrationform" onsubmit="validateform(event)">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword">
+            </div>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <div id="error-message"></div>
+    </div>
+    <script src="project9.js"></script>
+</body>
+</html>
+
+
