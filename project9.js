@@ -71,7 +71,7 @@ function containsSpecial(pwd) {
 function isValidLength(pwd) {
     return pwd.length >= 8 && pwd.length <= 12;
 }
-*/
+
 
 function f1(c)
 {
@@ -108,6 +108,51 @@ var e=document.getElementById("head2");
 alert(e.innerHTML);
 e.style.color="red"
 e.style.textAlign="center"
+*/
+
+
+  function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let error = "";
+
+    // Name check
+    if (name === "") {
+      error += "Name is required.\n";
+    }
+
+    // Email check (simple check)
+    if (email === "" || !email.includes("@")) {
+      error += "Valid email is required.\n";
+    }
+
+    // Password check
+    if (password.length < 8 || password.length > 12) {
+      error += "Password must be 8 to 12 characters long.\n";
+    }
+
+    // Password pattern: at least one letter, one number, one special character
+    let pattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])/;
+    if (!pattern.test(password)) {
+      error += "Password must contain at least one letter, one number, and one special character.\n";
+    }
+
+    // Confirm password check
+    if (password !== confirmPassword) {
+      error += "Passwords do not match.\n";
+    }
+
+    // Show error if any
+    if (error !== "") {
+      alert(error);
+      return false; // form submit na ho
+    }
+
+    return true; // sab sahi hai to form submit ho
+  }
+
 
 
 

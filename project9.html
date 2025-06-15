@@ -118,7 +118,7 @@ Requirements:
 
 
 
--->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,6 +158,39 @@ Requirements:
         <div id="error-message"></div>
     </div>
     <script src="project9.js"></script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="project9.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter a strong password" />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" />
+
+      <div id="errorMessages"></div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script src="project9.js"></script>
 </body>
 </html>
 
